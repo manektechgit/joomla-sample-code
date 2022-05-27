@@ -1,0 +1,81 @@
+//////////////////FAQ STYLING CUSTOM MODULE////////////////////////
+.faq_outer {
+    .faq_question {
+        .faq {
+            display:flex;
+            flex-direction:column;
+            margin-bottom:25px;
+            cursor: pointer;
+
+            .title_btn {
+                background:#4c9e45;
+                color:#fff;
+                padding:10px 25px;
+                position:relative;
+                display:flex;
+                &:after {
+                    font-family: Font Awesome\ 5 Free;
+                    font-weight: 900;
+                    content: "\f107";
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    margin-left:auto;
+                    margin-top:3px;
+                    font-size:20px;
+                }
+            }
+            .faq_inner {
+                display:flex;
+                opacity:0;
+                transition: all 0.5s ease 0s;
+                height:0;
+                visibility: hidden;
+                @media screen and (max-width: 540px){
+                    flex-direction:column;
+                }
+                img {
+                    flex:0 0 200px;
+                    max-width:200px;
+                    object-fit: cover;
+                    margin:0;
+                    float:none;
+                    @media screen and (max-width: 540px){
+                        flex:0 0 100%;
+                        max-width:100%;
+                    }
+                }
+                .txt {
+                    flex:0 0 calc(100% - 200px);
+                    max-width:calc(100% - 200px);
+                    padding-left:25px;
+                    height:100%;
+                    @media screen and (max-width: 540px){
+                        flex:0 0 100%;
+                        max-width:100%;
+                        padding-left:0;
+                    }
+                }
+            }
+             
+            .faq_inner.open {
+                opacity:1;
+                height:auto;
+                padding:25px;
+                background-color:rgba(0,0,0,0.05);
+                border:1px solid rgba(0,0,0,0.1);
+                visibility: visible;
+
+            }
+            .title_btn.open {
+                &:after {
+                    content: "\f104";
+                }
+            }
+            
+        }
+    }
+}

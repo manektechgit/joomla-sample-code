@@ -1,0 +1,76 @@
+///////////////////////////////////////////////////////////////////////////////
+/////////////////////////BASIS SETTINGS VOOR TEMPLATE//////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+//Body
+$body-bg:    #fff !default;
+$body-color: #373a3c !default;
+
+//Fonts settings
+$font-family-sans-serif: 'Roboto', sans-serif;
+$headings-font-family: 'Roboto', sans-serif;
+
+// Colors
+$primary-color: #ef4023;
+$secondary-color: #014a69;
+$cta-color: #ef4023;
+$tertiary-color: #ecd816;
+
+
+// font colors
+$primary-font-color: #fff;  //white
+$secondary-font-color: #2f2f2f;  //dark
+
+// overig colors
+$mainborder-color: #e5e5e5;
+$header-color: $secondary-color;
+
+// link color
+$link-color: $secondary-color !default;
+$link-hover-decoration: none !default;
+
+// Paddings
+$standard-padding: 3.5% 0;
+$standard-padding-mobile: 50px 0;
+
+//navigatie
+$navigation-padding: 6px 18px;
+$navigation-bg-color: #fff;  //bg nav color
+$navigation-color: $primary-font-color; //font nav color
+$navigation-bg-color-MO: $primary-color;  //bg nav color mouseover
+$navigation-color-MO: $primary-font-color;  //font nav color mouseover
+$nav-zindex:999;
+
+//buttons
+$btn-primary-color: $primary-font-color; //font
+$btn-primary-bg: $secondary-color; //bg
+$btn-primary-hover: darken($secondary-color, 7%);
+$btn-primary-padding: 5px 17px 6px;
+
+// footer
+$footer-bg: #01364d;
+$footer-txt: rgba($color: #fff, $alpha: 0.8);
+$footer-link: rgba($color: #fff, $alpha: 0.8);
+$list-style-image: url(../images/footer_arrow.png);
+
+// headers
+$font-size-h1: 38px !default;
+$font-size-h2: 30px !default;
+$font-size-h3: 26px !default; 
+$font-size-h4: 22px !default; 
+$font-size-h5: 20px !default; 
+$font-size-h6: 18px !default;
+$headings-font-style: normal;
+
+// Header
+$header-background-color: #fff;
+$header-sticky-height: 50px;
+$header-height: 105px;
+$header-align: bottom;
+$xtrabar-bg-color:#f3f3f3;
+
+////grid layout
+$blockpadding: 20px;
+$framepadding: $blockpadding;
+
+// transition
+$transition-animate: all ease 0.4s;

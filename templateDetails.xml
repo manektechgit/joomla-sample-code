@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="template">
+	<name>standard4</name>
+	<creationDate>2020-05-03</creationDate>
+	<author>Dennis</author>
+	<authorEmail>info@tenzer.nl</authorEmail>
+	<authorUrl>https://www.tenzer.nl</authorUrl>
+	<copyright>Copyright© 2020</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>TenZer custom designer Template</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>html</folder>
+	</files>
+	<config>
+		<fields name="params">
+            <fieldset name="contact" label="Contactgegevens">
+				<field name="bedrijfsnaam" type="text" label="Bedrijfsnaam" />
+				<field name="naam" type="text" label="Naam (optioneel)" />
+                <field name="adres" type="text" label="Adres" />
+                <field name="postcode" type="text" label="Postcode" />  
+                <field name="plaats" type="text" label="Plaats - Provincie" />
+				<field name="pcountry" type="text" label="Country"/>
+                <field name="telefoon" type="text" label="Telefoonnummer" />   
+				<field name="mobiel" type="text" label="Mobiel" />   
+                <field name="mailadres" type="text" label="E-mailadres" />
+                <field name="bedrijfsimage" type="media" label="Bedrijf afbeelding" />				                <field name="social_facebook" type="url" label="Facebook" />                <field name="social_instagram" type="url" label="Instagram" />                <field name="social_twitter" type="url" label="Twitter" />                <field name="social_youtube" type="url" label="Youtube" />
+			</fieldset>			<fieldset name="google-analytics" label="Google analytics">				<field name="google-analytics-code" type="textarea" label="Google analytics code" rows="10" filter="raw" />			</fieldset>
+        </fields>
+	</config>
+	<positions>
+		<position>logo</position>
+		<position>pagespeedhead</position>
+		<position>menu</position>
+		<position>zb-token</position>
+		<position>zb-javascript</position>
+		<position>bookbuttons</position>
+		<position>tools-telephone</position>
+		<position>tools-languages</position>
+		<position>slider</position>
+		<position>header_search</position>
+		<position>content-left</position>
+		<position>content-right</position>
+		<position>client_logoslider</position>
+		<position>google-review</position>
+		<position>bottombar</position>
+		<position>breadcrumb</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>copyright</position>
+		<position>sliderfooter</position>
+		<position>productblocks</position>
+		<position>blockslider</position>
+		<position>tabsblock</position>
+		<position>zb-bottom-bar</position>
+
+	</positions>
+</extension>

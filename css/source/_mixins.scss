@@ -1,0 +1,80 @@
+///// Sticky mixing?
+@mixin make-sticky($top) {
+    top: -$top;
+    bottom: auto;
+    &.sticky-on {
+        position: fixed;
+        top: 0;
+        z-index: 20;
+
+        + .sticky-placeholder {
+            display: block;
+        }
+    }
+    &.sticky-off {
+        position: static;
+    }
+    + .sticky-placeholder {
+        display: none;
+    }
+}
+
+////flexbox mixin met breakpoints
+@mixin flexbox($procent:null, $width1:null, $procent1:null, $width2:null, $procent2:null, $width3:null, $procent3:null ) {
+    flex: 0 0 $procent;
+    max-width: $procent;
+    @media screen and (max-width: $width1) {
+        flex:0 0 $procent1;
+        max-width:$procent1;
+    }
+    @media screen and (max-width: $width2) {
+        flex:0 0 $procent2;
+        max-width:$procent2;
+    }
+    @media screen and (max-width: $width3) {
+        flex:0 0 $procent3;
+        max-width:$procent3;
+    }
+}
+//flex break mixin als de cols gebruikt zijn
+@mixin flexbreak( $width1, $procent1, $width2:null, $procent2:null) {
+    @media screen and (max-width: $width1) {
+        flex:0 0 $procent1;
+        max-width:$procent1;
+    }
+    @media screen and (max-width: $width2) {
+        flex:0 0 $procent2;
+        max-width:$procent2;
+    }
+}
+
+
+///fontawesome icon
+@mixin icon($icon, $position: 'after', $font-size: 14px) {
+    @if $position == 'after' {
+        &::after {
+            font-family: Font Awesome\ 5 Free;
+            font-weight: 900;
+            content: $icon;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+    } @else {
+        &::before {
+            font-family: Font Awesome\ 5 Free;
+            font-weight: 900;
+            content: $icon;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+    }
+}
+  

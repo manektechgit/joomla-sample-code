@@ -1,0 +1,35 @@
+.loader {
+    -webkit-animation: load-out 0.3s;
+    animation: load-out 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes load-out {
+    from {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+@keyframes load-out {
+    from {
+        opacity: 1;
+        visibility: visible;
+         pointer-events: auto;
+    }
+
+    to {
+        opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+}

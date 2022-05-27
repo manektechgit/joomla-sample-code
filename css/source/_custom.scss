@@ -1,0 +1,506 @@
+//////////////////ZB Overwrites///////////////////
+// always overwrite on the body so you can see if
+// a search and book class is overwritten ///////
+/////////////////////////////////////////////////
+body {
+//////////////////Search/////////////////////////
+    .header_search {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        bottom: 78px;
+        @media screen and (max-width: 991px){
+            position:relative;
+        }
+        .header-search-book {
+            .zb-widget-txt {
+                h1 {
+                    color:white;
+                    margin-bottom:20px;
+                }
+            }
+        }
+    }
+//////////////////Packages///////////////////////
+    .harbor-widget-overview-packages {
+        &.harbor-is-carousel {
+            .h-package-categories {
+                .h-columns {
+                    .h-column {
+                        .h-package-category {
+                            border:none;
+                        }
+                    }
+                }
+            }
+            .h-top {
+                .h-prefix-message {
+                    color:white;
+                }
+                /////////////////TEMP////////////////////
+                .h-people {  ///// remove styling after jigar widgets!!
+                    .harbor-widget-search {
+                        position:static;
+                        box-shadow:none;
+                        background:transparent;
+                        padding:0;
+                    }
+                }
+                /////////////////TEMP END///////////////
+            }
+        }
+    }
+/////////////////////////////////////////////////
+}
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////dont change this///////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////// OVER WRITES TO GO INTO CENTRAL WITH UNIQUE CLASS ////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+.zb-search-home {
+    .harbor-main-widget {   ////////////switch classes in central
+        @at-root {
+            .scrolled {    ///////////rename to zb-search-scroll
+                .harbor-main-widget {
+                    .harbor-widget-search {  /// change to new class with custom jigar class
+                        position:fixed;
+                        top:40px;
+                        width:100%;
+                        left:0;
+                        background:white;
+                        padding:15px 25px;
+                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                        .h-search-columns {
+                            max-width:1200px;
+                            margin:0 auto;
+                            @media screen and (max-width: 1200px){
+                                max-width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .h-search-columns {
+            .h-columns {
+                border:none;
+                background:transparent;
+                padding:0;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////END dont change this///////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////// OLD will be removed ///////////////////////
+/*
+.header_search{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    bottom: 78px;
+    .zb-widget-txt,.zb-widget-code{
+        width: 100%;
+    }
+    .header-search-book{
+        @media screen and (min-width: 1200px) {
+            padding: 0 38px;
+        }
+    }
+    h1{
+        font-size: 69px;
+        color: $primary-font-color;
+        text-shadow: 0 0 22px rgba(0, 0, 0, 0.7);
+        line-height: 77px;
+        margin-bottom:15px; 
+        font-weight: normal;
+    }
+    @media screen and (max-width: 991px) {
+        position: relative;
+        padding: 30px 42px 60px;
+        margin: 0;
+        display: block;
+        background: $secondary-color;
+        bottom: auto;
+        h1{
+            text-shadow: none;
+            font-size: 56px;
+            line-height: normal;
+            margin-bottom: 16px;
+        }
+        .zb-widget-code{
+            min-height: 350px;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        h1{
+            font-size: 9vw;
+            margin-bottom: 3vw;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        padding: 40px 0;
+    }
+
+    .zb-widget-code{
+        .harbor-main-widget{
+            width: 100%;
+            .harbor-widget-search {
+                .h-select-box {
+                    .h-select-button{
+                        align-items: center;
+                        @media screen and ( min-width: 992px ) {
+                            height: 63px;
+                            align-items: center;
+                            padding-left: 22px;
+                            padding-right: 22px;
+                            border-radius: 2px;
+                            box-shadow: 0 0 30px rgba(0, 0, 0, 0.20);
+                            &::after{
+                                color: $primary-color;
+                            }
+                            .h-label,.h-value{
+                                font-size: 20px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                    &.h-select-periods{
+                        .h-select-body{
+                            padding: 0;
+                        }
+                    }
+                }
+                .h-search-columns {
+                    .h-columns{
+                        background-color: transparent;
+                        border: none;
+                        align-items: center;
+                        padding: 0;
+                        .h-column{
+                            @media screen and ( min-width: 992px ) {
+                                padding: 0 15px;
+                                &:first-child{
+                                    padding-left: 0;
+                                }
+                                .h-button-search{
+                                    font-size: 30px;
+                                    font-family: $headings-font-family;
+                                    align-items: center;
+                                    background: $tertiary-color;
+                                    border-radius: 0;
+                                    color: $secondary-font-color;
+                                    padding: 27px 30px;
+                                    &:hover{
+                                        background: darken($tertiary-color, 7%);;
+                                    }
+                                    &::before{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                @media screen and ( max-width: 991px ) {
+                    .h-search-columns {
+                        position: inherit;
+                        display: block;
+                        margin-bottom: 0px;
+                        .h-columns{
+                            padding: 0;
+                            .h-column{
+                                width: 100%;
+                            }
+                            .h-button-search{
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                    .h-select-box {
+                        .h-select-button{
+                            height: 50px;
+                        }
+                    }
+                    .h-select-body{
+                        position: relative;
+                        box-shadow: none;
+                        text-align: left;
+                    }
+                }
+                @media screen and ( max-width: 575px ) {
+                    .h-search-columns {
+                        .h-columns{
+                            .h-button-search{
+                                height: 55px;
+                                font-size: 24px;
+                                &:before{
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .h-expand{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.scrolled{
+    section{
+        @media screen and ( min-width: 992px ) {
+            .header_search {
+                transform: none;
+                width: 100%;
+                margin-left: auto;
+                height: auto;
+                position: fixed;
+                padding: 12px 0;
+                top: 40px;
+                bottom: auto;
+                background: $secondary-color;
+                transition: all ease 0.6s;
+                z-index: 10;
+                .header-search-book{
+                    width: 100%;
+                    margin-bottom: 0;
+                    padding: 0;
+                    border-radius: 0;
+                    &:before{
+                        display: none;
+                    }
+                    .zb-widget-txt{
+                        display: none;
+                    }
+                    .harbor-main-widget {
+                        .harbor-widget-search {
+                            .h-search-columns {
+                                .h-columns{
+                                    .h-column{
+                                        .h-select-box {
+                                            .h-select-button {
+                                                height: auto;
+                                            }
+                                        }
+                                        .h-button-search{
+                                            position: static;
+                                            width: auto;
+                                            padding: 13px 20px;
+                                            font-size: 22px;
+                                            height: auto;
+                                            transition: none;
+                                            &::before{
+                                                font-size: 18px;
+                                            }
+                                            @media screen and ( max-width: 1199px ) {
+                                            font-size: 20px;
+                                            &::before{
+                                                display: none;
+                                            }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .header_search {
+            @media screen and ( max-width: 991px ) {
+                z-index: 3;
+                .harbor-main-widget .harbor-widget-search.h-expandable .h-search-columns.h-expanded{
+                    display: block;
+                }
+            }
+            .header-search-book{
+                .harbor-main-widget {
+                    .harbor-widget-search {
+                        @media screen and ( max-width: 991px ) {
+                            .h-expand{
+                                display: block;
+                            }
+                            .h-search-columns {
+                                position: fixed;
+                                display: none;
+                                margin-bottom: 50px;
+                                .h-columns{
+                                    background-color: $primary-font-color;
+                                    padding: 1.2rem;
+                                }
+                            }
+                            .h-select-body{
+                                position: absolute;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.bottom_zb_open{
+        section{
+            .header_search {
+                @media screen and ( max-width: 991px ) {
+                    z-index: 9999;
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.overflow_body{
+        overflow: hidden;
+        &::before{
+            content: '';
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba($color: #000, $alpha: 0.5);
+            z-index: 10;
+        }
+    }
+    &.bottom_zb_open {
+        overflow: hidden;
+    }
+    &.no-banner{
+        padding-top: 110px;
+    }
+    &.packages-open{
+        .sidebar{
+            .zb-widget-code{
+                z-index: 10;
+            }
+        }
+    }
+
+    .harbor-main-widget{
+        .harbor-widget-overview{
+            margin-top: 40px;
+            .h-accommodations-details{
+                margin-bottom: 20px;
+                margin-top: 35px;
+            }
+            .h-accommodations {
+                .h-columns {
+                    .h-column {
+                        .h-accommodation-title{
+                            color: $secondary-color;
+                        }
+                        .h-accommodation-buttons {
+                            background: $secondary-color;
+                            .h-button{
+                                font-size: 18px;
+                                border-color: $primary-font-color;
+                                &.h-button-reservation{
+                                    background: transparent;
+                                    color: $primary-font-color;
+                                    border-color: $primary-font-color;
+                                    &:hover{
+                                        background: $primary-font-color;
+                                        color: $secondary-color;
+                                    }
+                                }
+                            }
+                        }
+                        .h-accommodation-price-label{
+                            background: $secondary-color;
+                            border-color: $secondary-color;
+                            .h-label-dates{
+                                color: $primary-font-color;
+                                font-weight: normal;
+                            }
+                        }
+                        .h-accommodation-price{
+                            background: $secondary-color;
+                            color: $secondary-color;
+                            .h-value{
+                                color: $primary-font-color;
+                            }
+                            
+                        }
+                        .h-accommodation-details{
+                            .h-accommodation-price{
+                                background: $secondary-color;
+                            }
+                        }
+                        .h-accommodation-price>a{
+                            color: $primary-font-color;
+                        }
+                        .h-accommodation-features {
+                            ul {
+                                li{
+                                    line-height: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .harbor-widget-top-bar {
+            .h-top-bar-container {
+                @media screen and (max-width: 991px){
+                    .h-information{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.zb-widget-code{
+    .harbor-main-widget{
+        .harbor-widget-titan{
+            .h-select-body{
+                left: 0 !important;
+                right: auto !important;
+                a{
+                    transition: none;
+                }
+            }
+        }
+    }
+}
+
+.harbor-main-widget{
+    .h-select-daterange{
+        .h-select-body{
+            a {
+                transition: none !important;
+            }
+        }
+    }
+}*/

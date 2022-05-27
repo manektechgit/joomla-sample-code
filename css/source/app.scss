@@ -1,0 +1,22 @@
+///////////////////////////////////////////////////////
+//////////////////////IMPORTS//////////////////////////
+///////////////////////////////////////////////////////
+// Import custom variables.
+@import "variables";
+
+// Import mixins.
+@import "mixins";
+
+//framework
+@import "components/framework";
+@import "components/standardelements";
+
+// Import standard template.
+@import "header";
+@import "content";
+@import "footer";
+@import "components/bottombar";
+@import "form";
+@import "custom";
+
+//////////////////ZOEK EN BOEK IMPORT//////////////////////////

@@ -1,0 +1,317 @@
+///////////////framework///////////////////////////////
+html {
+    font-family: sans-serif;
+    line-height: 28px;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: $font-family-sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: $secondary-font-color;
+    text-align: left;
+    margin:0;
+    // overflow-x: hidden;
+    background: $body-bg;
+    @media screen and (max-width: 991px) {
+        font-size: 17px;
+        font-weight: 300;
+    }
+}
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1210px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (max-width: 1200px) {
+        max-width:100%;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -$framepadding;
+        margin-left: -$framepadding;
+    }
+}
+
+//////////////VARIABLE NODIG//////////////
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $headings-font-family;
+    line-height: 32px;
+    color: $header-color;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: $headings-font-style;
+
+}
+h2 {
+    font-size: 40px;
+    line-height:normal;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: $secondary-color;
+    display: block;
+    @media screen and (max-width: 1199px) {
+        font-size: 32px;
+        line-height:40px;
+    }
+}
+a {
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    &:hover {
+        text-decoration: none;
+    }
+}
+p {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 37px;
+    margin-bottom: 25px;
+    font-display: optional;
+    font-weight: 100;
+    @media screen and (max-width: 991px) {
+        margin-bottom: 20px;
+        font-size: 17px;
+        line-height: 28px;
+        font-weight: 300;
+    }     
+    a{
+        color:$cta-color;
+        &:hover {
+            color:darken($cta-color, 15%); 
+        }
+    }       
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    user-select: none;
+    padding: 13px 24px;
+    font-size: 24px;
+    font-family: $headings-font-family;
+    font-weight: normal;
+    position: relative;
+    overflow: hidden;
+    cursor:pointer;
+    z-index: 1;
+    background: $cta-color;
+    border: none;
+    border-radius: 0;
+    color: $primary-font-color;
+    img{margin-left: 7px;}
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:darken($cta-color, 5%);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+    &:hover{
+    &:before{-webkit-transform: scaleX(1);
+    transform: scaleX(1);}
+    }
+    i{
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    @media screen and (max-width: 991px) {
+        font-size: 20px;
+    }
+}
+
+/////////////////////Standaard List styling/////////////////
+.content {
+    ul{
+        padding:0;
+        list-style:none;
+        li {
+            color:$secondary-font-color;
+            font-size: 20px;
+            position: relative;
+            line-height: 36px;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            font-weight: 100;
+            &:before {
+                content:"";
+                padding-right:5px;
+                width: 6px;
+                height: 6px;
+                display: inline-block;
+                background: $cta-color;
+                position: absolute;
+                left: 0;
+                top: 15px;
+                border-radius: 50%;
+            }
+            @media screen and (max-width: 991px) {
+                font-size: 17px;
+                line-height: 28px;
+                padding-left: 20px;
+                font-weight: 300;
+                &:before {
+                    top: 11px;
+                }
+            }  
+        }
+    }
+    ol {
+        //margin:0;
+        padding-left:18px;
+        li {
+            color:$secondary-font-color;
+            margin-bottom:5px;
+        }
+    }
+}
+.hidden {
+    display:none;
+}
+.show {
+    display:block;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+/////////////////PJ standaard classes//////////////////////////
+///////////////////////////////////////////////////////////////
+///////////////Container classes.. al ingebreppen in .row///////////
+.flex {
+    display:flex;
+}
+.flex-column {
+    flex-direction:column;
+}
+///////////12 deling frameorks settings////////////
+%frame-padding {
+    padding: 0 $framepadding;
+    @media screen and (max-width: 540px) {
+        padding: 0 $framepadding;
+    }
+}
+.col1 {
+    @include flexbox(8.333333333333333%);
+    @extend %frame-padding;
+}
+.col2 {
+    @include flexbox(16.66666666666667%);
+    @extend %frame-padding;
+}
+.col3 {
+    @include flexbox(25%);
+    @extend %frame-padding;
+}
+.col4 {
+    @include flexbox(33.33333333333333%);
+    @extend %frame-padding;
+}
+.col5 {
+    @include flexbox(41.66666666666667%);
+    @extend %frame-padding;
+}
+.col6 {
+    @include flexbox(50%, 767px, 100%);
+    @extend %frame-padding;
+}
+.col7 {
+    @include flexbox(58.33333333333333%);
+    @extend %frame-padding;
+}
+.col8 {
+    @include flexbox(66.66666666666667%);
+    @extend %frame-padding;
+}
+.col9 {
+    @include flexbox(75%);
+    @extend %frame-padding;
+}
+.col10 {
+    @include flexbox(83.33333333333333%);
+    @extend %frame-padding;
+}
+.col11 {
+    @include flexbox(91.66666666666667%);
+    @extend %frame-padding;
+}
+.col12 {
+    @include flexbox(100%);
+    @extend %frame-padding;
+}
+///////////blokken//////////////
+%col-padding {
+    padding:0 $blockpadding;
+    margin-bottom: $blockpadding * 2;
+    @media screen and (max-width: 540px) {
+        padding: 0 $blockpadding;
+        margin-bottom:$blockpadding;
+    }
+}
+.col-blocks-2 {
+    @include flexbox(50%, 991px, 100%);
+    @extend %col-padding;
+}
+.col-blocks-3 {
+    @include flexbox(33.3333%, 991px, 50%, 540px, 100%);
+    @extend %col-padding;
+}
+.col-blocks-4 {
+    @include flexbox(25%, 991px, 50%, 540px, 100%);
+    @extend %col-padding;
+}
+.col-blocks-5 {
+    @include flexbox(20%, 1200px, 33.3333%, 991px, 50%, 768px, 100%);
+    @extend %col-padding;
+}
+
+
+/* section fluid here */
+.section-max-fluid{
+    position: relative;
+    width: 1590px;
+    margin-left: calc(-795px + 50%);
+    @media screen and ( max-width: 1600px ) {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 0 10px;
+    }
+}
+.section-fluid{
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50% - 9px);
+}

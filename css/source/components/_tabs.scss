@@ -1,0 +1,54 @@
+///////////////////////TAB styling//////////////////////////
+
+.nav-tabs {
+    border-bottom: 1px solid $mainborder-color;
+    padding-left:0;
+    list-style-image:none;
+    margin-bottom:15px;
+    display:flex;
+    @media all and (max-width:540px) {
+        flex-direction:column;
+        flex-wrap:wrap;
+    }
+
+    .nav-item {
+        border: none;
+        border-bottom: none;
+        float:none;
+        &:before {
+            content:none;
+        }
+        + .nav-item {
+            margin-left: 15px;
+        }
+        @media all and (max-width:540px) {
+            width: 100%;
+            + .nav-item {
+                margin-left: 0;
+            }
+        }
+        .nav-link {
+            display: block;
+            padding: $btn-primary-padding;
+            border: 1px solid $mainborder-color;
+            border-bottom: none;
+            color:$primary-color;
+            text-decoration:none;
+            &.active {
+                border-color: $primary-color;
+                color:$primary-font-color;
+                background-color: $primary-color;
+            }
+            &:hover {
+                  background-color: $primary-color;
+                  color: $primary-font-color;
+                  border-color:$primary-color;
+            }
+        }
+    }
+}  
+.tab-content,.tab-detail-content {
+    .rl_tabs-title {
+        display:none;
+    }
+}
