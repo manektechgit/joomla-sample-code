@@ -697,7 +697,6 @@
 /tmp/*
 /configuration.php
 /htaccess.txt
-/index.php
 /joomla.xml
 /LICENSE.txt
 /README.txt
